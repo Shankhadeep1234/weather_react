@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SeasonDisplay from "./SeasonDisplay";
+import Spinner from "./Spinner";
 
 class App extends Component {
   //   constructor(props) {
@@ -27,7 +28,7 @@ class App extends Component {
       return <SeasonDisplay latitude={this.state.lat} />;
     }
 
-    return <div>Loading....</div>;
+    return <Spinner message='Please wait while we get your location' />;
   }
 
   render() {
